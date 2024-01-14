@@ -1,0 +1,68 @@
+Update system packages
+$ sudo apt update
+
+Install Docker Engine
+$ sudo apt install docker.io
+
+Enable Docker Service
+Docker service will start automatically at boot time
+$ sudo systemctl enable docker
+
+To check if docker service is running
+$ sudo systemctl status docker
+
+To start docker service
+$ sudo systemctl start docker
+
+Clear screen
+$ Clear
+
+Run a test container
+$ sudo docker run hello-world
+
+How to Install and Configure VNC on Ubuntu 22.04
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
+
+-------
+
+pip install
+$ sudo apt install python3-pip -y
+
+Django install
+$ pip install django
+
+$ python3 manage.py makemigrations
+
+$ python3 manage.py migrate
+
+$ python3 manage.py createsuperuser
+
+$ python3 manage.py runserver 0.0.0.0:8000
+
+-------
+> Create an ampty repository on github, first
+
+> git init
+
+> git status
+
+> git add .
+
+> git commit -m "message" -m "description"
+
+> git remote add origin git@github.com:markko7/repo.git
+
+> git remote -v
+
+> git push origin main
+
+------- Enable ssh agent forwarding
+
+>ssh-add .ssh/id_ed25519
+
+>ssh -A -i "django.pem" ubuntu@ec2-184-73-57-135.compute-1.amazonaws.com
+
+Check if it's working, after connecting to the AWS instance
+$ echo "$SSH_AUTH_SOCK"
+/tmp/ssh-XXXXTlVgkz/agent.4631
+
