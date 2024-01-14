@@ -8,7 +8,7 @@ ADMINS = [
     ('Mark Ko', 'markko7@gmail.com'),
 ]
 
-ALLOWED_HOSTS = ['34.230.7.143', 'mkcloud.link', 'www.mkcloud.link']
+ALLOWED_HOSTS = ['3.212.58.155', 'mkcloud.link', 'www.mkcloud.link']
 
 DATABASES = {
     'default': {
