@@ -11,7 +11,7 @@ COPY requirements.txt /code/
 
 RUN pip install -r requirements.txt
 
-RUN apt-get install -y libpcre3 libpcre3-dev
+RUN apt-get update -y && apt-get install -y libpcre3 libpcre3-dev
 
 RUN pip install uwsgi
 
