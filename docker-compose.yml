@@ -35,15 +35,15 @@ services:
       - db
       - cache
     
-  # nginx:
-  #   image: nginx:1.23.1
-  #   restart: always
-  #   volumes:
-  #     - ./config/nginx:/etc/nginx/templates
-  #     - .:/code
-  #   ports:
-  #     - "80:80"
-  #     - "443:443"
+  nginx:
+    image: nginx:1.23.1
+    restart: always
+    volumes:
+      - ./config/nginx:/etc/nginx/templates
+      - .:/code
+    ports:
+      - "80:80"
+      - "443:443"
 
   # daphne:
   #   build: .
