@@ -50,7 +50,7 @@ $ python3 manage.py runserver 0.0.0.0:8000
 
 > git commit -m "message" -m "description"
 
-> git remote add origin git@github.com:markko7/repo.git
+> git remote add origin https://github.com/markko7/deploy.git
 
 > git remote -v
 
@@ -66,3 +66,9 @@ Check if it's working, after connecting to the AWS instance
 $ echo "$SSH_AUTH_SOCK"
 /tmp/ssh-XXXXTlVgkz/agent.4631
 
+------- Install docker-compose on AWS instance
+
+$ sudo apt update
+$ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+$ docker-compose -v
