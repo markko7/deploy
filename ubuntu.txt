@@ -72,3 +72,15 @@ $ sudo apt update
 $ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose -v
+
+------- Accessing a docker container from a shell
+
+$ sudo docker exec -it deploy-web-1 /bin/bash
+
+------- Web container permission error
+
+web-1     | bind(): Permission denied [core/socket.c line 230]
+-> uwsgi socket creation problem ??
+
+temporary solution, at the project root directory
+$ sudo chmod -R 777 ./
